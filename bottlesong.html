@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BottleSong</title>
+</head>
+<body>
+    <script>
+        var count = 100;
+
+function beer() {
+    while (count >= 1) {
+        let currentBottleWord = count === 1 ? "bottle" : "bottles";
+        let nextCount = count - 1;
+        let nextBottleWord;
+
+        if (nextCount > 1) {
+            nextBottleWord = "bottles";
+        } else if (nextCount === 1) {
+            nextBottleWord = "bottle";
+        } else {
+            nextBottleWord = "no more bottles";
+        }
+
+        console.log(
+            count + " " + currentBottleWord + " of beer on the wall, " +
+            count + " " + currentBottleWord + " of beer. Take 1 down, pass it around, " +
+            nextCount + " " + nextBottleWord + " of beer on the wall."
+        );
+
+        count--;
+    }
+}
+
+beer();
+
+    </script>
+</body>
+</html>
